@@ -1,0 +1,87 @@
+.surveyListOption {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  img {
+    width: 88px;
+  }
+
+  .surveyListItemContent {
+    text-align: right;
+    flex-grow: 1;
+
+    p {
+      font-size: 12px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+  }
+}
+
+.imageSurvey {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: 16px;
+
+  .option {
+    max-width: 136px;
+    max-height: 136px;
+    border-radius: 2px;
+    overflow: hidden;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 15px;
+    cursor: pointer;
+    position: relative;
+    background: #FFFFFF;
+    padding: 10px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.textSurvey {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  flex-direction: column;
+  margin-bottom: 16px;
+
+  .option {
+    border-radius: 2px;
+    overflow: hidden;
+    padding: 8px;
+    background-color: $white;
+    margin: 8px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+  }
+}
+
+.selectedOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $blueTransparent;
+
+  .material-icons {
+    color: $white !important;
+  }
+}

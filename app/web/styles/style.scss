@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+$blueGrey: #E6E9EB;
+$blue: #1D8BF1;
+$blueTransparent: rgba(29, 139, 241, 0.9);
+$white: #FFF;
+$blue2: #3c65f1;
+$lightBlue: #2ac8e1;
+$blueGradient: linear-gradient(120deg, $blue2, $lightBlue);
+$red: #F44336;
+
+@import 'layout';
+@import 'profilePage';
+@import 'rewards';
+@import 'survey';
+
+
+body { 
+  padding: 0;
+  margin: 0;
+  background-color: $blueGrey;
+  font-family: 'Lato', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  //overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.gaugeButton {
+  box-shadow: none !important;
+  border-radius: 18px !important;
+
+  button {
+    border-radius: 18px !important;
+  }
+}
+
+.gaugeActions {
+  padding: 16px !important;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.error {
+  color: $red;
+}
+
+.tinyLink {
+  color: $white;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.pointsTracker {
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+
+  .trackerCenter {
+    max-width: 800px;
+    flex-grow: 1;
+
+    .rowMenu {
+      padding-top: 16px;
+      padding-bottom: 16px;
+  
+      .pointsNumber {
+        font-size: 42px;
+      }
+      .pointsLabel {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.rowMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  justify-content: center;
+
+  .containerContent {
+    max-width: 800px;
+    min-width: 240px;
+    flex-grow: 1;
+  }
+  .small {
+    max-width: 585px;
+  }
+  .panel {
+    background-color: $white;
+    border-radius: 2px;
+    padding: 16px;
+    margin-top: 16px;
+  }
+}
+
+.centerWithPadding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  text-align: center;
+}
+
+.properPadding {
+  padding: 16px;
+}

@@ -1,0 +1,53 @@
+const path = require('path');
+const webpack = require('webpack');
+
+module.exports = {
+  devtool: 'cheap-module-eval-source-map',
+  entry: [
+    'babel-polyfill',
+    path.join(__dirname, '../../app/web/index'),
+  ],
+  output: {
+    path: path.join(__dirname, '../public'),
+    filename: 'bundle.js',
+    publicPath: '/',
+  },
+  resolve: {
+    root: [
+      path.resolve(__dirname, '../../app')
+    ]
+  },
+  module: {
+    loaders: [
+      // take all less files, compile them, and bundle them in with our js bundle
+      { 
+        test: /\.scss$/, 
+        loader: 'style!css!autoprefixer?browsers=last 2 version!sass' 
+      },{
+        test: /\.css$/,
+        loader: 'style!css!autoprefixer?browsers=last 2 version'
+      },{
+        test: /\.json$/,
+        loader: "json",
+      },{
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015', 'react', 'stage-0']
+        },
+      },
+    ],
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('development'),
+        PLATFORM_ENV: JSON.stringify('web'),
+        NODE_PATH: JSON.stringify('./app')
+      },
+    }),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.NoErrorsPlugin(),
+  ],
+};

@@ -1,0 +1,14 @@
+.field {
+  margin-right: 1rem;
+}
+
+.profileInfoRow {
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  .profileInfoRow {
+    display: block;
+    padding: 0 2rem 0;
+  }
+}

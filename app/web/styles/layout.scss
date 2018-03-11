@@ -1,0 +1,52 @@
+
+.logo {
+  height: 25px;
+}
+.logoLogin {
+  height: 35px;
+  margin-bottom: 1.5rem;
+}
+.headerLogo {
+  margin-right: 32px;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
+}
+.noShadow {
+  box-shadow: none !important;
+}
+.headerTab {
+  height: 64px;
+}
+.fullScreenCenter {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+span[role=menuitem] {
+  text-decoration: none !important;
+}
+
+.drawer {
+  top: 66px !important;
+}
+
+.loginContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: $blueGradient;
+}
+
+.loginBox {
+  width: 100%;
+  max-width: 25rem;
+  text-align: center;
+}
