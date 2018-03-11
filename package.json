@@ -1,14 +1,14 @@
 {
-  "name": "education-site",
-  "description": "Education Site Frontend",
+  "name": "the-fates",
+  "description": "The Fates Game",
   "author": "Jackson Morgan",
   "license": "MIT",
   "version": "0.9.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/safe-steps/Frontend"
+    "url": "https://github.com/jaxoncreed/TheFates"
   },
-  "homepage": "https://github.com/safe-steps/Frontend",
+  "homepage": "https://github.com/jaxoncreed/TheFates",
   "main": "bin/server.js",
   "scripts": {
     "start": "concurrent --kill-others \"npm run start-prod\"",
@@ -54,12 +54,11 @@
       "command": "webpack --verbose --colors --display-error-details --config webpack/prod.config.js",
       "env": {
         "NODE_PATH": "./src",
-	"NODE_ENV": "production"
+        "NODE_ENV": "production"
       }
     }
   },
   "dependencies": {
-    "auth0-lock": "^10.14.0",
     "autoprefixer-loader": "^3.1.0",
     "babel-core": "^6.5.2",
     "babel-eslint": "^5.0.0-beta6",
@@ -114,6 +113,7 @@
     "phantomjs-polyfill": "0.0.1",
     "piping": "^0.3.0",
     "pretty-error": "^1.2.0",
+    "prop-types": "^15.6.1",
     "react": "0.14.8",
     "react-a11y": "^0.2.6",
     "react-addons-test-utils": "0.14.8",
