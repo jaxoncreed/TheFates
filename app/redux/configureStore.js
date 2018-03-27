@@ -3,9 +3,8 @@ import reduxThunkMiddleware from 'redux-thunk'
 import clientMiddleware from './clientMiddleware'
 import apiClient from './apiClient'
 
-import surveys from './modules/surveys';
-import user from './modules/user';
-import rewards from './modules/rewards';
+import gameState from './modules/gameState.js';
+import levelState from './modules/levelState.js';
 
 export default function configureStore(initialState, platformSpecificStores = {}, platformSpecificMiddleware = []) {
   const middlewares = [
@@ -16,9 +15,8 @@ export default function configureStore(initialState, platformSpecificStores = {}
   const store = createStore(
     combineReducers({
       ...platformSpecificStores,
-      surveys,
-      user,
-      rewards
+      game: gameState,
+      level: levelState
     }),
     initialState,
     compose(...middlewares)
